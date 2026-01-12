@@ -53,13 +53,167 @@
 /* VARIABLES
 ------------------------------------------------------------- */
 :root {
-  --color-base: #FFFFFF;
-  --color-primary: #EB9C29;
-  --color-secondary: #112031;
-  --color-tertiary: #F5F5F7;
-  --color-text: #111111;
-  --color-text-secondary: #757575;
-  --color-border: #E0E0E0;
+  /* =====================================================
+   * COLORS — Foundation / Palette
+   * ===================================================== */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-text: #222222;
+  --color-text-accent: #8f8e8e;
+
+  --color-border: #ececec;
+
+  --color-primary: #2859ff;
+  --color-primary-dark: #0043ca;
+  --color-primary-soft: #e6edff;
+
+  --color-secondary: #f5f5f5;
+  --color-secondary-dark: #d6d6d6;
+  --color-secondary-soft: #fbfbfb;
+
+  --color-success: #28a745;
+  --color-success-dark: #1e7e34;
+  --color-success-soft: #e6f4ea;
+
+  --color-danger: #dc3545;
+  --color-danger-dark: #bd2130;
+  --color-danger-soft: #f8d7da;
+
+  --color-warning: #ffc107;
+  --color-warning-dark: #d39e00;
+  --color-warning-soft: #fff3cd;
+
+  --color-info: #17a2b8;
+  --color-info-dark: #117a8b;
+  --color-info-soft: #d1ecf1;
+
+
+  /* =====================================================
+   * SIZE & SPACING — Foundation
+   * ===================================================== */
+  --size-3: 12px;
+  --size-4: 16px;
+  --size-5: 20px;
+  --size-6: 24px;
+
+  --size-8: 32px;
+  --size-9: 36px;
+  --size-12: 48px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+
+
+  /* =====================================================
+   * RADIUS — Foundation
+   * ===================================================== */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+
+  /* =====================================================
+   * FOCUS RING — Semantic
+   * ===================================================== */
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-color: var(--color-primary);
+
+
+  /* =====================================================
+   * FORM CONTROL — Semantic
+   * (Input, Select, Textarea, Button base)
+   * ===================================================== */
+  --control-bg: var(--color-white);
+  --control-text: var(--color-text);
+  --control-border: var(--color-border);
+
+  --control-bg-hover: var(--color-white);
+  --control-border-focus: var(--color-primary);
+
+  --control-bg-disabled: var(--color-secondary-soft);
+  --control-text-disabled: var(--color-text-accent);
+  --control-border-disabled: var(--color-secondary-dark);
+
+  --control-bg-readonly: var(--color-secondary-soft);
+  --control-text-readonly: var(--color-text);
+  --control-border-readonly: var(--color-border);
+
+  --control-radius: var(--radius-md);
+
+
+  /* =====================================================
+   * CONTROL SIZE & TYPOGRAPHY
+   * ===================================================== */
+  --control-height-sm: var(--size-8);
+  --control-height-md: var(--size-9);
+  --control-height-lg: var(--size-12);
+
+  --control-padding-sm: 0.5rem 0.75rem;
+  --control-padding-md: 0.5rem 1rem;
+  --control-padding-lg: 0.75rem 1.25rem;
+
+  --control-font-size-sm: 0.75rem;
+  --control-font-size-md: 0.875rem;
+  --control-font-size-lg: 1.125rem;
+
+
+  /* =====================================================
+   * BUTTON — Semantic
+   * ===================================================== */
+  --button-gap-sm: var(--space-1);
+  --button-gap-md: var(--space-2);
+  --button-gap-lg: var(--space-3);
+
+
+  /* =====================================================
+   * INPUT — Semantic
+   * (prefix / suffix / icon)
+   * ===================================================== */
+  --input-affix-gap-sm: var(--space-1);
+  --input-affix-gap-md: var(--space-2);
+  --input-affix-gap-lg: var(--space-2);
+
+
+  /* =====================================================
+   * CHECKBOX — Semantic
+   * ===================================================== */
+  --checkbox-size-sm: 14px;
+  --checkbox-size-md: var(--size-4);
+  --checkbox-size-lg: var(--size-5);
+  --checkbox-radius: var(--radius-sm);
+
+
+  /* =====================================================
+   * RADIO — Semantic
+   * ===================================================== */
+  --radio-size-sm: 14px;
+  --radio-size-md: var(--size-4);
+  --radio-size-lg: var(--size-5);
+
+
+  /* =====================================================
+   * SWITCH — Semantic
+   * ===================================================== */
+  --switch-width-sm: var(--size-8);
+  --switch-width-md: var(--size-9);
+  --switch-width-lg: var(--size-12);
+
+  --switch-height-sm: var(--size-4);
+  --switch-height-md: var(--size-5);
+  --switch-height-lg: var(--size-6);
+
+  --switch-thumb-size-sm: 12px;
+  --switch-thumb-size-md: var(--size-4);
+  --switch-thumb-size-lg: var(--size-5);
+
+  --switch-track-bg-on: var(--color-primary);
+  --switch-track-bg-off: var(--color-border);
+
+  --switch-radius: var(--radius-full);
 }
 
 /* RESET 
