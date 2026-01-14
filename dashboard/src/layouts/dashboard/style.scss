@@ -1,0 +1,22 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+
+  &__logo {
+    font-size: 1rem;
+    color: var(--color-primary);
+    padding-left: 12px;
+  }
+
+  &__sidebar {
+    background-color: #f8f8fa;
+    padding: 1rem;
+    width: 100%;
+    max-width: 230px;
+  }
+
+  &__main {
+    flex-grow: 1;
+    padding: 1rem;
+  }
+}

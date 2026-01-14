@@ -1,0 +1,15 @@
+.auth {
+  display: flex;
+  min-height: 100vh;
+
+  &__left {
+    background-color: var(--color-primary);
+    flex-grow: 1;
+  }
+
+  &__right {
+    width: 100%;
+    max-width: 450px;
+    padding: 15% 32px 32px 32px;
+  }
+}

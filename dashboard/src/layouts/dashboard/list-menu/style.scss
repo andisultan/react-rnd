@@ -1,0 +1,29 @@
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 2rem 0 1rem 0;
+    padding-left: 12px;
+  }
+
+  &__item {
+    display: block;
+  }
+
+  &__link {
+    display: flex;
+    gap: 0.5rem;
+    padding: 8px 12px;
+    font-size: 14px;
+
+    &:hover,
+    &--active {
+      background-color: var(--color-primary-soft);
+    }
+  }
+}

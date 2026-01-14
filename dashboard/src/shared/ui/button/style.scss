@@ -1,0 +1,359 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--button-gap-md);
+  width: fit-content;
+
+  font-family: inherit;
+  text-align: center;
+  white-space: nowrap;
+
+  background-color: var(--control-bg);
+  color: var(--control-text);
+  border: 1px solid transparent;
+  border-radius: var(--control-radius);
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  /* =====================================================
+   * Focus
+   * ===================================================== */
+  &:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 var(--focus-ring-offset) transparent,
+      0 0 0 calc(var(--focus-ring-offset) + var(--focus-ring-width))
+        var(--focus-ring-color);
+  }
+
+  /* =====================================================
+   * Global press feedback
+   * ===================================================== */
+  &:active:not(:disabled):not(.ams-button--loading) {
+    transform: translateY(1px);
+    opacity: 0.95;
+  }
+
+  /* =====================================================
+   * Icon only
+   * ===================================================== */
+  &--icon {
+    gap: 0;
+    padding: 0;
+    width: var(--control-height-md);
+    height: var(--control-height-md);
+
+    svg,
+    i {
+      font-size: 1.25em;
+      pointer-events: none;
+    }
+
+    &.ams-button--sm {
+      width: var(--control-height-sm);
+      height: var(--control-height-sm);
+    }
+
+    &.ams-button--lg {
+      width: var(--control-height-lg);
+      height: var(--control-height-lg);
+    }
+  }
+
+  /* =====================================================
+   * Scale variants
+   * ===================================================== */
+  &--sm {
+    height: var(--control-height-sm);
+    padding: var(--control-padding-sm);
+    font-size: var(--control-font-size-sm);
+    gap: var(--button-gap-sm);
+  }
+
+  &--md {
+    height: var(--control-height-md);
+    padding: var(--control-padding-md);
+    font-size: var(--control-font-size-md);
+    gap: var(--button-gap-md);
+  }
+
+  &--lg {
+    height: var(--control-height-lg);
+    padding: var(--control-padding-lg);
+    font-size: var(--control-font-size-lg);
+    gap: var(--button-gap-lg);
+  }
+
+  /* =====================================================
+   * Primary
+   * ===================================================== */
+  &--primary-solid {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-primary-dark);
+    }
+
+    &:active {
+      background-color: var(--color-primary-dark);
+    }
+  }
+
+  &--primary-outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+
+    &:hover {
+      background-color: var(--color-primary-soft);
+    }
+
+    &:active {
+      background-color: var(--color-primary-soft);
+    }
+  }
+
+  &--primary-text {
+    background-color: transparent;
+    color: var(--color-primary);
+
+    &:hover {
+      background-color: var(--color-primary-soft);
+    }
+
+    &:active {
+      background-color: var(--color-primary-soft);
+    }
+  }
+
+  /* =====================================================
+   * Secondary
+   * ===================================================== */
+  &--secondary-solid {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+
+    &:hover {
+      background-color: var(--color-secondary-dark);
+    }
+
+    &:active {
+      background-color: var(--color-secondary-dark);
+    }
+  }
+
+  &--secondary-outline {
+    background-color: transparent;
+    color: var(--color-text);
+    border-color: var(--color-border);
+
+    &:hover {
+      background-color: var(--color-secondary-soft);
+    }
+
+    &:active {
+      background-color: var(--color-secondary-soft);
+    }
+  }
+
+  &--secondary-text {
+    background-color: transparent;
+    color: var(--color-text);
+
+    &:hover {
+      background-color: var(--color-secondary-soft);
+    }
+
+    &:active {
+      background-color: var(--color-secondary-soft);
+    }
+  }
+
+  /* =====================================================
+   * Danger
+   * ===================================================== */
+  &--danger-solid {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-danger-dark);
+    }
+
+    &:active {
+      background-color: var(--color-danger-dark);
+    }
+  }
+
+  &--danger-outline {
+    background-color: transparent;
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+
+    &:hover {
+      background-color: var(--color-danger-soft);
+    }
+
+    &:active {
+      background-color: var(--color-danger-soft);
+    }
+  }
+
+  &--danger-text {
+    background-color: transparent;
+    color: var(--color-danger);
+
+    &:hover {
+      background-color: var(--color-danger-soft);
+    }
+
+    &:active {
+      background-color: var(--color-danger-soft);
+    }
+  }
+
+  /* =====================================================
+   * Warning
+   * ===================================================== */
+  &--warning-solid {
+    background-color: var(--color-warning);
+    color: var(--color-black);
+
+    &:hover {
+      background-color: var(--color-warning-dark);
+    }
+
+    &:active {
+      background-color: var(--color-warning-dark);
+    }
+  }
+
+  &--warning-outline {
+    background-color: transparent;
+    color: var(--color-warning-dark);
+    border-color: var(--color-warning);
+
+    &:hover {
+      background-color: var(--color-warning-soft);
+    }
+
+    &:active {
+      background-color: var(--color-warning-soft);
+    }
+  }
+
+  &--warning-text {
+    background-color: transparent;
+    color: var(--color-warning-dark);
+  }
+
+  /* =====================================================
+   * Success
+   * ===================================================== */
+  &--success-solid {
+    background-color: var(--color-success);
+    color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-success-dark);
+    }
+
+    &:active {
+      background-color: var(--color-success-dark);
+    }
+  }
+
+  &--success-outline {
+    background-color: transparent;
+    color: var(--color-success);
+    border-color: var(--color-success);
+
+    &:hover {
+      background-color: var(--color-success-soft);
+    }
+
+    &:active {
+      background-color: var(--color-success-soft);
+    }
+  }
+
+  &--success-text {
+    background-color: transparent;
+    color: var(--color-success);
+
+    &:hover {
+      background-color: var(--color-success-soft);
+    }
+
+    &:active {
+      background-color: var(--color-success-soft);
+    }
+  }
+
+  /* =====================================================
+   * Info
+   * ===================================================== */
+  &--info-solid {
+    background-color: var(--color-info);
+    color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-info-dark);
+    }
+
+    &:active {
+      background-color: var(--color-info-dark);
+    }
+  }
+
+  &--info-outline {
+    background-color: transparent;
+    color: var(--color-info);
+    border-color: var(--color-info);
+
+    &:hover {
+      background-color: var(--color-info-soft);
+    }
+
+    &:active {
+      background-color: var(--color-info-soft);
+    }
+  }
+
+  &--info-text {
+    background-color: transparent;
+    color: var(--color-info);
+
+    &:hover {
+      background-color: var(--color-info-soft);
+    }
+
+    &:active {
+      background-color: var(--color-info-soft);
+    }
+  }
+
+  /* =====================================================
+   * State
+   * ===================================================== */
+  &:disabled {
+    background-color: var(--control-bg-disabled);
+    color: var(--control-text-disabled);
+    border-color: var(--control-border-disabled);
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &--loading {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &--fullWidth {
+    width: 100%;
+  }
+}
